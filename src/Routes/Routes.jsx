@@ -8,6 +8,8 @@ import Order from "../pages/Order/Order/Order";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Home/signup/Signup";
 import PrivetRouter from "./PrivetRouter";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
 
 
   export const router = createBrowserRouter([
@@ -37,4 +39,14 @@ import PrivetRouter from "./PrivetRouter";
         }
       ]
     },
+    {
+      path: 'dashboard',
+      element : <Dashboard></Dashboard>,
+      children : [
+        {
+          path : 'mycart',
+          element: <MyCart></MyCart>
+        }
+      ]
+    }
   ]);
