@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import Swal from 'sweetalert2'
+import SocialLogin from "../Shared/socialLogin/SocialLogin";
 
 const Login = () => {
     const [disabled, setDisabled] = useState(true);
@@ -91,6 +92,7 @@ const Login = () => {
                             </div>
                         </form>
                         <p><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
